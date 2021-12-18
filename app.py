@@ -13,24 +13,24 @@ from sklearn.model_selection import train_test_split
 from sklearn import linear_model
 
 # API used: https://exchangerate.host/#/#docs
-#
-# print("ENTER THREE LETTER CURRENCY CODE WHEN PROMPTED ie USD or EUR")
-# print("")
-# currency_code1 = input("From currency code: ")
-# currency_code2 = input("To currency code: ")
-# amount = input("Amount: ")
-# url = 'https://api.exchangerate.host/convert'
-# response = requests.get(url, params={
-#     "from": currency_code1,
-#     "to": currency_code2,
-#     "amount": amount,
-#     "places": 2
-# })
-# data = response.json()['result']
-# print("Result: ",end="")
-# print(data)
-# print("")
-#
+print("ENTER THREE LETTER CURRENCY CODE WHEN PROMPTED ie USD or EUR")
+print("")
+currency_code1 = input("From currency code: ")
+currency_code2 = input("To currency code: ")
+amount = input("Amount: ")
+url = 'https://api.exchangerate.host/convert'
+response = requests.get(url, params={
+    "from": currency_code1,
+    "to": currency_code2,
+    "amount": amount,
+    "places": 2
+})
+data = response.json()['result']
+print("Result: ",end="")
+print(data)
+print("")
+
+
 # print("Historical data - first 10 months for reference")
 currency_data = pd.read_csv("GBPUSD=X-2yr.csv")
 print(currency_data.head(10))
