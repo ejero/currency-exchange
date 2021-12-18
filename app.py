@@ -54,7 +54,7 @@ x = x.to_numpy()
 y = y.to_numpy()
 
 # training
-xtrain, xtest,ytrain, ytest = train_test_split(x,y, test_size=0.2, random_state=42)
+xtrain, xtest,ytrain, ytest = train_test_split(x,y, test_size=0.2, train_size=0.80, random_state=42)
 
 from sklearn.linear_model import LinearRegression
 md = LinearRegression()
