@@ -60,6 +60,7 @@ from sklearn.linear_model import LinearRegression
 md = LinearRegression()
 md.fit(xtrain,ytrain)
 
+
 reg = linear_model.LinearRegression()
 reg.fit(xtrain,ytrain)
 
@@ -75,7 +76,8 @@ print(pre[0])
 print("Actual next currency rate for 2017-11-1 is: ")
 print(ytrain[0])
 
-
+print("Scoring the prediction: ")
+print(md.score(xtest,ytest))
 
 # Use data from Open, High and Low to train
 close_prediction = md.predict(xtest)
